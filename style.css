@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: rgb(243, 220, 193);
+  --secondary-color: rgb(197, 117, 13);
+}
+
+h1 {
+  color: var(--secondary-color);
+}
+
 body {
-  background-color: rgb(145, 145, 145);
-  font-family: 'Muli', sans-serif;
+  background-color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,14 +53,25 @@ body {
 }
 
 .panel a {
+  background-color: var(--secondary-color);
+  cursor: grab;
   position: absolute;
   bottom: 46px;
-  left: 200px;
-  font-size: 1.3rem;
+  left: 50px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
-  color: black;
+  color: darkslateblue;
   opacity: 0;
+  color: var(--primary-color);
+}
+
+.panel span {
+  color: white;
+  font-style: italic;
 }
 
 .panel.active {
